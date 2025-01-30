@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info">
+      <class name="amazon1.Project_1.Testcase6_Verify_search_using_filters">
         <methods>
+          <include name="search_product_apply_filters"/>
           <include name="quit"/>
           <include name="launch1"/>
-          <include name="user_can_edit_profile_info"/>
         </methods>
-      </class> <!-- amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info -->
+      </class> <!-- amazon1.Project_1.Testcase6_Verify_search_using_filters -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

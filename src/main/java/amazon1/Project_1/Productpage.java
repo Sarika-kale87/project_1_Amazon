@@ -20,7 +20,7 @@ public class Productpage {
 	WebDriver driver;
 	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 	
-	@FindBy(xpath="(//i[@class='a-icon a-icon-checkbox'])[8]")
+	@FindBy(xpath="(//i[@class='a-icon a-icon-checkbox'])[12]")
 	WebElement filter_brand_checkbox;
 	
 	@FindBy(xpath="(//div[@class='colorsprite aok-float-left'])[8]")
@@ -65,6 +65,9 @@ public class Productpage {
 	@FindBy(xpath="//input[@value='Proceed to checkout']")
 	WebElement proceedtocheckout_button;
 	
+	@FindBy(xpath="(//span[@class='a-size-base a-color-base'])[6]")
+	WebElement filter_size;
+	
 	public void addtocart_drawing(WebDriver driver)
 	{
 		Set<String>s1=driver.getWindowHandles();
@@ -77,7 +80,11 @@ public class Productpage {
 		
 		Assert.assertEquals(proceedtocheckout_button.isDisplayed(), true);
 	}
-	
+	public void filter_size()
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(filter_size));
+		filter_size.click();
+	}
 	
 	public void filter_brand()
 	{

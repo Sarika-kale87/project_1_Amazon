@@ -15,7 +15,7 @@ public class Launch_quit {
 	@Parameters("browser")
 	@BeforeMethod
 	
-	/*public void launch(@Optional("Edge")String browsername)
+	public void launch(String browsername)
 	{
 		
 		if(browsername.equals("Edge"))
@@ -25,26 +25,27 @@ public class Launch_quit {
 			driver.manage().window().maximize();
 			
 		}
-		else if (browsername.equals("Firefox"))
+		else if (browsername.equals("Chrome"))
 		{
-			driver=new FirefoxDriver();
+			driver=new ChromeDriver();
 			driver.get("https://www.amazon.in");
 			driver.manage().window().maximize();
+			driver.navigate().refresh();
 			
 		}
 		
-	}*/
-	public void launch1()
+	}
+	/*public void launch1()
 	{
 		driver=new EdgeDriver();
 		driver.get("https://www.amazon.in");
 		driver.manage().window().maximize();
 		
-	}
+	}*/
 	@AfterMethod
 	public void quit()
 	{
-		//driver.quit();
+		driver.quit();
 	}
 	
 	

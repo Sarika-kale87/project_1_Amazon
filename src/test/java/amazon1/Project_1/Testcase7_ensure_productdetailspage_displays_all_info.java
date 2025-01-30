@@ -5,7 +5,7 @@ import java.io.IOException;
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
-@Listeners(value=Listeners_logic.class)
+//@Listeners(value=Listeners_logic.class)
 public class Testcase7_ensure_productdetailspage_displays_all_info extends Launch_quit{
 	
 	@Test

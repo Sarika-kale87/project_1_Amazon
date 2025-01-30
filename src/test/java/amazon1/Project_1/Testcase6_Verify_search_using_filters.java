@@ -22,7 +22,7 @@ public class Testcase6_Verify_search_using_filters extends Launch_quit {
 		l1.signin();
 		h1.search_product1();
 		Productpage p1=new Productpage(driver);
-		p1.filter_brand();
+		p1.filter_size();
 		p1.filter_color(); 
 		
 	

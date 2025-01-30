@@ -3,7 +3,7 @@
 <suite name="Suite" parallel="tests">
 <listeners><listener class-name="amazon1.Project_1.Listeners_logic"></listener></listeners>
   <test thread-count="5" name="Testing Edge">
-  <parameter name="bowser" value="Edge"></parameter>
+  <parameter name="browser" value="Edge"></parameter>
     <classes>
       <class name="amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info"/>
       <class name="amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info"/>
@@ -20,8 +20,8 @@
       <class name="amazon1.Project_1.Testcase3_Login_wrong_username_pwd"/>
     </classes>
   </test> <!-- Test -->
-  <test thread-count="5" name="Testing Firefox">
-  <parameter name="bowser" value="Firefox"></parameter>
+  <test thread-count="5" name="Testing chrome">
+  <parameter name="browser" value="Chrome"></parameter>
     <classes>
       <class name="amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info"/>
       <class name="amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info"/>
