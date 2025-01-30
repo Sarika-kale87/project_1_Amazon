@@ -1,0 +1,689 @@
+<html>
+<head>
+<title>TestNG:  Testing Edge</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Testing Edge</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/5/2</td>
+</tr><tr>
+<td>Started on:</td><td>Thu Jan 30 15:40:02 CET 2025</td>
+</tr>
+<tr><td>Total time:</td><td>612 seconds (612128 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters()'><b>search_product_apply_filters</b><br>Test class: amazon1.Project_1.Testcase6_Verify_search_using_filters<br/>
+<a href="#Output-1867168473" onClick='toggleBox("Output-1867168473", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1867168473" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1867168473">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=132.0.2957.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [376ad4acf3bf9ea868920276bc75a8fc, clickElement {id=f.8FA615B1BFFA555928DE9B137AC583E9.d.ABE6F03FF9F2DAF175A0504E08D54BD0.e.114}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.127, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57746}, msedge: {msedgedriverVersion: 132.0.2957.127 (cbce079b96b..., userDataDir: C:\Users\kales\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57746/devtoo..., se:cdpVersion: 132.0.2957.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (376ad4acf3bf9ea868920276bc75a8fc)] -&gt; xpath: (//span[.=&apos;Sign in&apos;])[1]]
+Session ID: 376ad4acf3bf9ea868920276bc75a8fc
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+	at amazon1.Project_1.Homepage.signin(Homepage.java:69)
+	at amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters(Testcase6_Verify_search_using_filters.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 20 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1867168473", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1867168473'><pre>org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: MicrosoftEdge=132.0.2957.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [376ad4acf3bf9ea868920276bc75a8fc, clickElement {id=f.8FA615B1BFFA555928DE9B137AC583E9.d.ABE6F03FF9F2DAF175A0504E08D54BD0.e.114}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.127, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:57746}, msedge: {msedgedriverVersion: 132.0.2957.127 (cbce079b96b..., userDataDir: C:\Users\kales\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57746/devtoo..., se:cdpVersion: 132.0.2957.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[EdgeDriver: MicrosoftEdge on windows (376ad4acf3bf9ea868920276bc75a8fc)] -&gt; xpath: (//span[.=&apos;Sign in&apos;])[1]]
+Session ID: 376ad4acf3bf9ea868920276bc75a8fc
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
+	at amazon1.Project_1.Homepage.signin(Homepage.java:69)
+	at amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters(Testcase6_Verify_search_using_filters.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>1</td>
+<td>amazon1.Project_1.Testcase6_Verify_search_using_filters@71d44a3</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review<br/>
+<a href="#Output-683726899" onClick='toggleBox("Output-683726899", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-683726899" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-683726899">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=132.0.2957.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5e3b1b9d49641093f9fd5fd3c15aded3, findElement {using=xpath, value=(//input[@name=&apos;submissionURL&apos;])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.127, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60750}, msedge: {msedgedriverVersion: 132.0.2957.127 (cbce079b96b..., userDataDir: C:\Users\kales\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60750/devtoo..., se:cdpVersion: 132.0.2957.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5e3b1b9d49641093f9fd5fd3c15aded3
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:669)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
+	at amazon1.Project_1.Checkoutpage.address_radio(Checkoutpage.java:68)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace683726899", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace683726899'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=132.0.2957.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [5e3b1b9d49641093f9fd5fd3c15aded3, findElement {using=xpath, value=(//input[@name=&apos;submissionURL&apos;])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.127, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:60750}, msedge: {msedgedriverVersion: 132.0.2957.127 (cbce079b96b..., userDataDir: C:\Users\kales\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60750/devtoo..., se:cdpVersion: 132.0.2957.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5e3b1b9d49641093f9fd5fd3c15aded3
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:669)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
+	at amazon1.Project_1.Checkoutpage.address_radio(Checkoutpage.java:68)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>58</td>
+<td>amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review@59474f18</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info()'><b>user_can_edit_profile_info</b><br>Test class: amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info<br/>
+<a href="#Output-2023947354" onClick='toggleBox("Output-2023947354", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2023947354" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2023947354">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getClass()&quot; because &quot;exceptionDriver&quot; is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at amazon1.Project_1.Homepage.edit_profile(Homepage.java:83)
+	at amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info(Testcase4_User_Successfully_edit_profile_info.java:24)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2023947354", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2023947354'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getClass()&quot; because &quot;exceptionDriver&quot; is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at amazon1.Project_1.Homepage.edit_profile(Homepage.java:83)
+	at amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info(Testcase4_User_Successfully_edit_profile_info.java:24)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>28</td>
+<td>amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info@223191a6</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display()'><b>ensure_productdetails_display</b><br>Test class: amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info<br/>
+<a href="#Output-1018795744" onClick='toggleBox("Output-1018795744", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1018795744" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1018795744">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getClass()&quot; because &quot;exceptionDriver&quot; is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at amazon1.Project_1.Productpage.product_price(Productpage.java:103)
+	at amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display(Testcase7_ensure_productdetailspage_displays_all_info.java:26)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1018795744", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1018795744'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.getClass()&quot; because &quot;exceptionDriver&quot; is null
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:85)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at amazon1.Project_1.Productpage.product_price(Productpage.java:103)
+	at amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display(Testcase7_ensure_productdetailspage_displays_all_info.java:26)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>30</td>
+<td>amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info@73a1e9a9</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort()'><b>Check_productsort</b><br>Test class: amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating<br/>
+<a href="#Output-1751110819" onClick='toggleBox("Output-1751110819", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1751110819" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1751110819">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //select[@name=&apos;s&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isEnabled(Unknown Source)
+	at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:430)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:125)
+	at amazon1.Project_1.Productpage.sort_button(Productpage.java:117)
+	at amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort(Testcase8_Check_Productsort_Relevance_price_rating.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1751110819", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1751110819'><pre>org.openqa.selenium.NoSuchElementException: Unable to find element with locator By.xpath: //select[@name=&apos;s&apos;]
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:168)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isEnabled(Unknown Source)
+	at org.openqa.selenium.support.ui.Select.assertSelectIsEnabled(Select.java:430)
+	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:125)
+	at amazon1.Project_1.Productpage.sort_button(Productpage.java:117)
+	at amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort(Testcase8_Check_Productsort_Relevance_price_rating.java:25)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>24</td>
+<td>amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating@1bb5a082</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart()'><b>updateaddedItemsQuantity_remove_from_cart</b><br>Test class: amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart<br/>
+<a href="#Output-468232505" onClick='toggleBox("Output-468232505", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-468232505" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-468232505">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>69</td>
+<td>amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart@3e694b3f</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin()'><b>Reach_till_cart_withoutLogin</b><br>Test class: amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin<br/>
+<a href="#Output-163493002" onClick='toggleBox("Output-163493002", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-163493002" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-163493002">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>19</td>
+<td>amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin@41d477ed</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration()'><b>NewUser_registration</b><br>Test class: amazon1.Project_1.Testcase1_Newuser_successfully_register<br/>
+<a href="#Output-858150817" onClick='toggleBox("Output-858150817", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-858150817" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-858150817">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>3</td>
+<td>amazon1.Project_1.Testcase1_Newuser_successfully_register@7b98f307</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes()'><b>signin_search_shoes</b><br>Test class: amazon1.Project_1.Testcase5_searchProduct_likeshoe<br/>
+<a href="#Output-1996523515" onClick='toggleBox("Output-1996523515", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1996523515" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1996523515">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>42</td>
+<td>amazon1.Project_1.Testcase5_searchProduct_likeshoe@34123d65</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify()'><b>Login_verify</b><br>Test class: amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd<br/>
+<a href="#Output-659743785" onClick='toggleBox("Output-659743785", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-659743785" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-659743785">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>4</td>
+<td>amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd@78691363</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.Verify_item_addtoshoppingcart()'><b>Verify_item_addtoshoppingcart</b><br>Test class: amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage<br/>
+<a href="#Output-1034652887" onClick='toggleBox("Output-1034652887", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1034652887" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1034652887">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>24</td>
+<td>amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage@65fb9ffc</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod<br/>
+<a href="#Output-167715377" onClick='toggleBox("Output-167715377", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-167715377" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-167715377">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>44</td>
+<td>amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod@4802796d</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd()'><b>Login_wrong_un_pwd</b><br>Test class: amazon1.Project_1.Testcase3_Login_wrong_username_pwd<br/>
+<a href="#Output-1131607836" onClick='toggleBox("Output-1131607836", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1131607836" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1131607836">
+Testcase passed<br/>
+</div>
+</td>
+<td></td>
+<td>2</td>
+<td>amazon1.Project_1.Testcase3_Login_wrong_username_pwd@3590fc5b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart()'><b>updateaddedItemsQuantity_remove_from_cart</b><br>Test class: amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Boolean.booleanValue()&quot; because &quot;value&quot; is null
+	at org.openqa.selenium.remote.RemoteWebElement.isEnabled(RemoteWebElement.java:183)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isEnabled(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:658)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at amazon1.Project_1.Addtocartpage.gotocart(Addtocartpage.java:46)
+	at amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart(Testcase10_UpdateItemsQuantities_remove_item_from_cart.java:30)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 17 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1523425662", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1523425662'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.lang.Boolean.booleanValue()&quot; because &quot;value&quot; is null
+	at org.openqa.selenium.remote.RemoteWebElement.isEnabled(RemoteWebElement.java:183)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isEnabled(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:658)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at amazon1.Project_1.Addtocartpage.gotocart(Addtocartpage.java:46)
+	at amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart(Testcase10_UpdateItemsQuantities_remove_item_from_cart.java:30)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>23</td>
+<td>amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart@3e694b3f</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review</td>
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=132.0.2957.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [ff72f9d3bafdc5a28ae584748abb790c, findElement {using=xpath, value=(//input[@name=&apos;submissionURL&apos;])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.127, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59939}, msedge: {msedgedriverVersion: 132.0.2957.127 (cbce079b96b..., userDataDir: C:\Users\kales\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59939/devtoo..., se:cdpVersion: 132.0.2957.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ff72f9d3bafdc5a28ae584748abb790c
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:669)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
+	at amazon1.Project_1.Checkoutpage.address_radio(Checkoutpage.java:68)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:33)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1361038026", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1361038026'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: MicrosoftEdge=132.0.2957.127)
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;23&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [ff72f9d3bafdc5a28ae584748abb790c, findElement {using=xpath, value=(//input[@name=&apos;submissionURL&apos;])[2]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 132.0.2957.127, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:59939}, msedge: {msedgedriverVersion: 132.0.2957.127 (cbce079b96b..., userDataDir: C:\Users\kales\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:59939/devtoo..., se:cdpVersion: 132.0.2957.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: ff72f9d3bafdc5a28ae584748abb790c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:501)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:485)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.toString(Unknown Source)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:669)
+	at java.base/java.lang.String.valueOf(String.java:4556)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
+	at amazon1.Project_1.Checkoutpage.address_radio(Checkoutpage.java:68)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:33)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:739)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1575)
+</pre></div></td>
+<td>48</td>
+<td>amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review@59474f18</td></tr>
+</table><p>
+</body>
+</html>

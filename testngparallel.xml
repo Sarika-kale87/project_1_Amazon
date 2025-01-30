@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+<listeners><listener class-name="amazon1.Project_1.Listeners_logic"></listener></listeners>
+  <test thread-count="5" name="Testing Edge">
+  <parameter name="bowser" value="Edge"></parameter>
+    <classes>
+      <class name="amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info"/>
+      <class name="amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info"/>
+      <class name="amazon1.Project_1.Testcase6_Verify_search_using_filters"/>
+      <class name="amazon1.Project_1.Testcase1_Newuser_successfully_register"/>
+      <class name="amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod"/>
+      <class name="amazon1.Project_1.Testcase5_searchProduct_likeshoe"/>
+      <class name="amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review"/>
+      <class name="amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage"/>
+      <class name="amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart"/>
+      <class name="amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating"/>
+      <class name="amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd"/>
+      <class name="amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin"/>
+      <class name="amazon1.Project_1.Testcase3_Login_wrong_username_pwd"/>
+    </classes>
+  </test> <!-- Test -->
+  <test thread-count="5" name="Testing Firefox">
+  <parameter name="bowser" value="Firefox"></parameter>
+    <classes>
+      <class name="amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info"/>
+      <class name="amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info"/>
+      <class name="amazon1.Project_1.Testcase6_Verify_search_using_filters"/>
+      <class name="amazon1.Project_1.Testcase1_Newuser_successfully_register"/>
+      <class name="amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod"/>
+      <class name="amazon1.Project_1.Testcase5_searchProduct_likeshoe"/>
+      <class name="amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review"/>
+      <class name="amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage"/>
+      <class name="amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart"/>
+      <class name="amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating"/>
+      <class name="amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd"/>
+      <class name="amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin"/>
+      <class name="amazon1.Project_1.Testcase3_Login_wrong_username_pwd"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
