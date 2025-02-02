@@ -28,7 +28,7 @@ public class Homepage {
 	
 	//@FindBy(xpath="(//span[@class='nav-text'])[6]")
 	//@FindBy(xpath="(//span[@class='nav-text'])[14]")
-	@FindBy(xpath="(//span[@class='nav-text'])[12]")
+	@FindBy(xpath="//span[.='Your Account']")
 	WebElement your_profile;
 	
 	@FindBy(xpath="//span[.='Edit addresses for orders and gifts']")
@@ -49,7 +49,14 @@ public class Homepage {
 	@FindBy(xpath="//span[.='Returns']")
 	WebElement return_and_order_hoverover;
 	
-	//@FindBy(xpath="")
+	@FindBy(xpath="//span[.='Your Orders']")
+	WebElement Your_order;
+	
+	public void yourorder()
+	{
+		wait.until(ExpectedConditions.visibilityOf(Your_order));
+		Your_order.click();
+	}
 	
 	public void accountandlist(WebDriver driver)
 	{
@@ -78,7 +85,7 @@ public class Homepage {
 		wait.until(ExpectedConditions.elementToBeClickable(your_profile));
 		your_profile.click();
 	}
-	public void edit_profile()
+	public void edit_profile(WebDriver driver)
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(Edit_address));
 		Edit_address.click();

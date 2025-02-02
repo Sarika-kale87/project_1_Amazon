@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Testcase1_Newuser_successfully_register extends Launch_quit 
 {
 
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void NewUser_registration() throws EncryptedDocumentException, IOException
 	{
 		

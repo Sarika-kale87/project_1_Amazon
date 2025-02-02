@@ -32,7 +32,7 @@ public class Productpage {
 	@FindBy(xpath="(//span[@class='a-price-whole'])[5]")
 	WebElement product_details_price_display;
 	
-	@FindBy(xpath="(//h1[@class='a-size-medium a-spacing-small'])")
+	@FindBy(xpath="(//span[.='Operating System'])[1]")
 	WebElement technical_details_product2;
 	
 	@FindBy(xpath="//select[@name='s']")
@@ -68,6 +68,29 @@ public class Productpage {
 	@FindBy(xpath="(//span[@class='a-size-base a-color-base'])[6]")
 	WebElement filter_size;
 	
+	@FindBy (xpath="//span[@id='attach-sidesheet-view-cart-button-announce']")
+	WebElement cart_button;
+	
+	@FindBy(xpath="//a[@id='a-autoid-5-announce']")
+	WebElement Leave_seller_feedback_button;
+	
+	@FindBy(xpath="//label[@aria-label='select to rate seller four stars']")
+	WebElement Ratings_button;
+	
+	public void ratings()
+	{
+		wait.until(ExpectedConditions.visibilityOf(Ratings_button));
+		Ratings_button.click();
+		Assert.assertEquals(Ratings_button.isDisplayed(), true);
+		
+	}
+	
+	public void leave_seller_feedback()
+	{
+		wait.until(ExpectedConditions.visibilityOf(Leave_seller_feedback_button));
+		Leave_seller_feedback_button.click();
+	}
+	
 	public void addtocart_drawing(WebDriver driver)
 	{
 		Set<String>s1=driver.getWindowHandles();
@@ -77,8 +100,14 @@ public class Productpage {
 		driver.switchTo().window(childid);
 		wait.until(ExpectedConditions.elementToBeClickable(addtocart_button_drawingbook));
 		addtocart_button_drawingbook.click();
-		
+		if(proceedtocheckout_button.isDisplayed())
+		{
 		Assert.assertEquals(proceedtocheckout_button.isDisplayed(), true);
+		}
+		else
+		{
+		Assert.assertEquals(cart_button.isDisplayed(), true);
+		}
 	}
 	public void filter_size()
 	{

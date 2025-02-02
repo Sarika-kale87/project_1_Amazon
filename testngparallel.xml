@@ -17,6 +17,7 @@
       <class name="amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating"/>
       <class name="amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd"/>
       <class name="amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin"/>
+      <class name="amazon1.Project_1.Testcase14_Goto_Orderpage_give_fivestarrating_onlastorder"/>
       <class name="amazon1.Project_1.Testcase3_Login_wrong_username_pwd"/>
     </classes>
   </test> <!-- Test -->

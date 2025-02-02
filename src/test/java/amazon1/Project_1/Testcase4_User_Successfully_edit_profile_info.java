@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Testcase4_User_Successfully_edit_profile_info extends Launch_quit{
 	
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void user_can_edit_profile_info() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);
@@ -21,7 +21,7 @@ public class Testcase4_User_Successfully_edit_profile_info extends Launch_quit{
 		l1.signin();
 		h1.accountandlist(driver);
 		h1.your_account();
-		h1.edit_profile();
+		h1.edit_profile(driver);
 		h1.edit_add_button(driver);
 		
 		

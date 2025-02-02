@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Testcase5_searchProduct_likeshoe extends Launch_quit{
 
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void signin_search_shoes() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

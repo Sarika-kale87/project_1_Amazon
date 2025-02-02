@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Testcase8_Check_Productsort_Relevance_price_rating extends Launch_quit {
 	
 	
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void Check_productsort() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

@@ -4,84 +4,9 @@
   <listeners>
     <listener class-name="amazon1.Project_1.Listeners_logic"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Testing Edge(failed)" verbose="0">
-    <parameter name="bowser" value="Edge"/>
+  <test thread-count="5" parallel="tests" name="Testing chrome(failed)" verbose="0">
+    <parameter name="browser" value="Chrome"/>
     <classes>
-      <class name="amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info">
-        <methods>
-          <include name="quit"/>
-          <include name="launch"/>
-          <include name="ensure_productdetails_display"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info -->
-      <class name="amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart">
-        <methods>
-          <include name="updateaddedItemsQuantity_remove_from_cart"/>
-          <include name="quit"/>
-          <include name="launch"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart -->
-      <class name="amazon1.Project_1.Testcase6_Verify_search_using_filters">
-        <methods>
-          <include name="search_product_apply_filters"/>
-          <include name="quit"/>
-          <include name="launch"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase6_Verify_search_using_filters -->
-      <class name="amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info">
-        <methods>
-          <include name="quit"/>
-          <include name="launch"/>
-          <include name="user_can_edit_profile_info"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info -->
-      <class name="amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating">
-        <methods>
-          <include name="Check_productsort"/>
-          <include name="quit"/>
-          <include name="launch"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating -->
-      <class name="amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review">
-        <methods>
-          <include name="quit"/>
-          <include name="checkout_process"/>
-          <include name="launch"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review -->
-    </classes>
-  </test> <!-- Testing Edge(failed) -->
-  <test thread-count="5" parallel="tests" name="Testing Firefox(failed)" verbose="0">
-    <parameter name="bowser" value="Firefox"/>
-    <classes>
-      <class name="amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info">
-        <methods>
-          <include name="quit"/>
-          <include name="launch"/>
-          <include name="ensure_productdetails_display"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info -->
-      <class name="amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin">
-        <methods>
-          <include name="Reach_till_cart_withoutLogin"/>
-          <include name="quit"/>
-          <include name="launch"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin -->
-      <class name="amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart">
-        <methods>
-          <include name="updateaddedItemsQuantity_remove_from_cart"/>
-          <include name="quit"/>
-          <include name="launch"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart -->
-      <class name="amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info">
-        <methods>
-          <include name="quit"/>
-          <include name="launch"/>
-          <include name="user_can_edit_profile_info"/>
-        </methods>
-      </class> <!-- amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info -->
       <class name="amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod">
         <methods>
           <include name="quit"/>
@@ -89,13 +14,32 @@
           <include name="checkout_process"/>
         </methods>
       </class> <!-- amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod -->
-      <class name="amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review">
+      <class name="amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd">
         <methods>
           <include name="quit"/>
-          <include name="checkout_process"/>
+          <include name="Login_verify"/>
           <include name="launch"/>
         </methods>
-      </class> <!-- amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review -->
+      </class> <!-- amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd -->
     </classes>
-  </test> <!-- Testing Firefox(failed) -->
+  </test> <!-- Testing chrome(failed) -->
+  <test thread-count="5" parallel="tests" name="Testing Edge(failed)" verbose="0">
+    <parameter name="browser" value="Edge"/>
+    <classes>
+      <class name="amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod">
+        <methods>
+          <include name="quit"/>
+          <include name="launch"/>
+          <include name="checkout_process"/>
+        </methods>
+      </class> <!-- amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod -->
+      <class name="amazon1.Project_1.Testcase1_Newuser_successfully_register">
+        <methods>
+          <include name="quit"/>
+          <include name="launch"/>
+          <include name="NewUser_registration"/>
+        </methods>
+      </class> <!-- amazon1.Project_1.Testcase1_Newuser_successfully_register -->
+    </classes>
+  </test> <!-- Testing Edge(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Testcase12_CheckIfUser_SelectPaymentMethod extends Launch_quit{
 	
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void checkout_process() throws InterruptedException, EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

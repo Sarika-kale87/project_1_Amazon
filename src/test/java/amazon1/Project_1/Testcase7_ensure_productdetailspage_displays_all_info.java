@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 //@Listeners(value=Listeners_logic.class)
 public class Testcase7_ensure_productdetailspage_displays_all_info extends Launch_quit{
 	
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void ensure_productdetails_display() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

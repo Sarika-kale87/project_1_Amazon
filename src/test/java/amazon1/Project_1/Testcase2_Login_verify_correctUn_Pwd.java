@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Testcase2_Login_verify_correctUn_Pwd extends Launch_quit{
 	
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void Login_verify() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

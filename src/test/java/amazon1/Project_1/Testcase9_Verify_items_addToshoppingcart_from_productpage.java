@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Testcase9_Verify_items_addToshoppingcart_from_productpage extends Launch_quit {
 	
 
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void Verify_item_addtoshoppingcart() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

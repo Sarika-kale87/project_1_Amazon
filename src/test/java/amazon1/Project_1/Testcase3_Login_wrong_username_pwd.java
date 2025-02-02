@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class Testcase3_Login_wrong_username_pwd extends Launch_quit {
 	
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void Login_wrong_un_pwd() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class Testcase6_Verify_search_using_filters extends Launch_quit {
 	
 	
-	@Test
+	@Test(retryAnalyzer=Retry_test.class)
 	public void search_product_apply_filters() throws EncryptedDocumentException, IOException
 	{
 		Homepage h1=new Homepage(driver);

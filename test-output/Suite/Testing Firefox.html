@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Testing Firefox</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/0/13</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/13/13</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Jan 30 15:32:21 CET 2025</td>
+<td>Started on:</td><td>Thu Jan 30 22:52:04 CET 2025</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (146 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (93 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -68,35 +68,41 @@ function toggleAllBoxes() {
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
 <table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
 <td width="30%"><b>Exception</b></td>
 <td width="10%"><b>Time (seconds)</b></td>
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='amazon1.Project_1.Testcase6_Verify_search_using_filters.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase6_Verify_search_using_filters</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info()'><b>user_can_edit_profile_info</b><br>Test class: amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info<br/>
+<a href="#Output-938958527" onClick='toggleBox("Output-938958527", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-938958527" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-938958527">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info(Testcase4_User_Successfully_edit_profile_info.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace9552338", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace9552338'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace938958527", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace938958527'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info(Testcase4_User_Successfully_edit_profile_info.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -105,39 +111,62 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase6_Verify_search_using_filters@4e50c791</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info@6913c1fb</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase3_Login_wrong_username_pwd.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase3_Login_wrong_username_pwd</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin()'><b>Reach_till_cart_withoutLogin</b><br>Test class: amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin<br/>
+<a href="#Output-926946280" onClick='toggleBox("Output-926946280", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-926946280" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-926946280">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at amazon1.Project_1.Homepage.search_product3(Homepage.java:105)
+	at amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin(Testcase15_Reach_till_cartpage_withoutlogin.java:12)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1997774256", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1997774256'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace926946280", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace926946280'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at amazon1.Project_1.Homepage.search_product3(Homepage.java:105)
+	at amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin(Testcase15_Reach_till_cartpage_withoutlogin.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -146,39 +175,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase3_Login_wrong_username_pwd@707194ba</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin@1e66f1f5</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort()'><b>Check_productsort</b><br>Test class: amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating<br/>
+<a href="#Output-1985894997" onClick='toggleBox("Output-1985894997", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1985894997" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1985894997">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort(Testcase8_Check_Productsort_Relevance_price_rating.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace699526165", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace699526165'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1985894997", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1985894997'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort(Testcase8_Check_Productsort_Relevance_price_rating.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -187,39 +227,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info@5fbe4146</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating@79d8407f</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.Verify_item_addtoshoppingcart()'><b>Verify_item_addtoshoppingcart</b><br>Test class: amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage<br/>
+<a href="#Output-1107677641" onClick='toggleBox("Output-1107677641", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1107677641" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1107677641">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.Verify_item_addtoshoppingcart(Testcase9_Verify_items_addToshoppingcart_from_productpage.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1133215215", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1133215215'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1107677641", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1107677641'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.Verify_item_addtoshoppingcart(Testcase9_Verify_items_addToshoppingcart_from_productpage.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -228,39 +279,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage@4961f6af</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage@158a8276</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration()'><b>NewUser_registration</b><br>Test class: amazon1.Project_1.Testcase1_Newuser_successfully_register<br/>
+<a href="#Output-816421765" onClick='toggleBox("Output-816421765", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-816421765" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-816421765">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration(Testcase1_Newuser_successfully_register.java:16)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace657023436", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace657023436'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace816421765", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace816421765'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration(Testcase1_Newuser_successfully_register.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -269,39 +331,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod@58a9760d</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase1_Newuser_successfully_register@609cd4d8</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display()'><b>ensure_productdetails_display</b><br>Test class: amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info<br/>
+<a href="#Output-2145027279" onClick='toggleBox("Output-2145027279", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-2145027279" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-2145027279">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display(Testcase7_ensure_productdetailspage_displays_all_info.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1252781145", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1252781145'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2145027279", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2145027279'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display(Testcase7_ensure_productdetailspage_displays_all_info.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -310,39 +383,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart@5aebe890</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info@66d18979</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters()'><b>search_product_apply_filters</b><br>Test class: amazon1.Project_1.Testcase6_Verify_search_using_filters<br/>
+<a href="#Output-1751830047" onClick='toggleBox("Output-1751830047", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1751830047" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1751830047">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters(Testcase6_Verify_search_using_filters.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace953423015", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace953423015'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1751830047", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1751830047'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters(Testcase6_Verify_search_using_filters.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -351,39 +435,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review@394df057</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase6_Verify_search_using_filters@bccb269</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review<br/>
+<a href="#Output-692860601" onClick='toggleBox("Output-692860601", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-692860601" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-692860601">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1328195647", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1328195647'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace692860601", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace692860601'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -392,39 +487,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info@1e66f1f5</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review@13b6aecc</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod<br/>
+<a href="#Output-1695127472" onClick='toggleBox("Output-1695127472", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1695127472" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1695127472">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process(Testcase12_CheckIfUser_SelectPaymentMethod.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace784800017", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace784800017'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1695127472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1695127472'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process(Testcase12_CheckIfUser_SelectPaymentMethod.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -433,39 +539,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd@33c911a1</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod@17f7cd29</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart()'><b>updateaddedItemsQuantity_remove_from_cart</b><br>Test class: amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart<br/>
+<a href="#Output-1511675169" onClick='toggleBox("Output-1511675169", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1511675169" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1511675169">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart(Testcase10_UpdateItemsQuantities_remove_item_from_cart.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2083862893", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2083862893'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1511675169", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1511675169'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart(Testcase10_UpdateItemsQuantities_remove_item_from_cart.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -474,39 +591,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin@75db5df9</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart@3c3d9b6b</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase5_searchProduct_likeshoe.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase5_searchProduct_likeshoe</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify()'><b>Login_verify</b><br>Test class: amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd<br/>
+<a href="#Output-1117886685" onClick='toggleBox("Output-1117886685", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1117886685" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1117886685">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify(Testcase2_Login_verify_correctUn_Pwd.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace455257467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace455257467'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1117886685", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1117886685'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify(Testcase2_Login_verify_correctUn_Pwd.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -515,39 +643,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase5_searchProduct_likeshoe@71e9ddb4</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd@5fbe4146</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase1_Newuser_successfully_register.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase1_Newuser_successfully_register</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd()'><b>Login_wrong_un_pwd</b><br>Test class: amazon1.Project_1.Testcase3_Login_wrong_username_pwd<br/>
+<a href="#Output-236791681" onClick='toggleBox("Output-236791681", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-236791681" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-236791681">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd(Testcase3_Login_wrong_username_pwd.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace517443308", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace517443308'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace236791681", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace236791681'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd(Testcase3_Login_wrong_username_pwd.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -556,39 +695,50 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase1_Newuser_successfully_register@7530ad9c</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase3_Login_wrong_username_pwd@4e50c791</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.launch()'><b>launch</b><br>Test class: amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes()'><b>signin_search_shoes</b><br>Test class: amazon1.Project_1.Testcase5_searchProduct_likeshoe<br/>
+<a href="#Output-334648813" onClick='toggleBox("Output-334648813", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-334648813" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-334648813">
+Testcase failed<br/>
+</div>
+</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes(Testcase5_searchProduct_likeshoe.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1860574040", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1860574040'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace334648813", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace334648813'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes(Testcase5_searchProduct_likeshoe.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.retryFailed(TestInvoker.java:213)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:58)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
 	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
@@ -597,89 +747,21 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating@65d09a04</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-skipped'>
-<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage@4961f6af</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase1_Newuser_successfully_register.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase1_Newuser_successfully_register</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase1_Newuser_successfully_register@7530ad9c</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase3_Login_wrong_username_pwd.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase3_Login_wrong_username_pwd</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase3_Login_wrong_username_pwd@707194ba</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase6_Verify_search_using_filters.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase6_Verify_search_using_filters</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase6_Verify_search_using_filters@4e50c791</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase5_searchProduct_likeshoe.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase5_searchProduct_likeshoe</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase5_searchProduct_likeshoe@71e9ddb4</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating@65d09a04</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod@58a9760d</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info@1e66f1f5</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin@75db5df9</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart@5aebe890</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info@5fbe4146</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review@394df057</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.quit()'><b>quit</b><br>Test class: amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd</td>
-<td></td>
-<td>-1738247541</td>
-<td>amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd@33c911a1</td></tr>
+<td>0</td>
+<td>amazon1.Project_1.Testcase5_searchProduct_likeshoe@7d8704ef</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-skipped'>
 <tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
@@ -690,25 +772,24 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 </tr>
 <tr>
 <td title='amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display()'><b>ensure_productdetails_display</b><br>Test class: amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display(Testcase7_ensure_productdetailspage_displays_all_info.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace804758199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace804758199'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1255505329", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1255505329'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info.ensure_productdetails_display(Testcase7_ensure_productdetailspage_displays_all_info.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -719,160 +800,41 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info@1e66f1f5</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd()'><b>Login_wrong_un_pwd</b><br>Test class: amazon1.Project_1.Testcase3_Login_wrong_username_pwd</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace907606588", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace907606588'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase3_Login_wrong_username_pwd@707194ba</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1738381787", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1738381787'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review@394df057</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify()'><b>Login_verify</b><br>Test class: amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace496265630", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace496265630'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd@33c911a1</td></tr>
+<td>amazon1.Project_1.Testcase7_ensure_productdetailspage_displays_all_info@66d18979</td></tr>
 <tr>
 <td title='amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters()'><b>search_product_apply_filters</b><br>Test class: amazon1.Project_1.Testcase6_Verify_search_using_filters</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters(Testcase6_Verify_search_using_filters.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1958768652", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1958768652'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1318916377", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1318916377'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase6_Verify_search_using_filters.search_product_apply_filters(Testcase6_Verify_search_using_filters.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -883,37 +845,86 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>amazon1.Project_1.Testcase6_Verify_search_using_filters@4e50c791</td></tr>
+<td>amazon1.Project_1.Testcase6_Verify_search_using_filters@bccb269</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify()'><b>Login_verify</b><br>Test class: amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify(Testcase2_Login_verify_correctUn_Pwd.java:14)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1945154070", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1945154070'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd.Login_verify(Testcase2_Login_verify_correctUn_Pwd.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase2_Login_verify_correctUn_Pwd@5fbe4146</td></tr>
 <tr>
 <td title='amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart()'><b>updateaddedItemsQuantity_remove_from_cart</b><br>Test class: amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart(Testcase10_UpdateItemsQuantities_remove_item_from_cart.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace856691198", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace856691198'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace100033245", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace100033245'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart.updateaddedItemsQuantity_remove_from_cart(Testcase10_UpdateItemsQuantities_remove_item_from_cart.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -924,37 +935,41 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart@5aebe890</td></tr>
+<td>amazon1.Project_1.Testcase10_UpdateItemsQuantities_remove_item_from_cart@3c3d9b6b</td></tr>
 <tr>
-<td title='amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort()'><b>Check_productsort</b><br>Test class: amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td title='amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd()'><b>Login_wrong_un_pwd</b><br>Test class: amazon1.Project_1.Testcase3_Login_wrong_username_pwd</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd(Testcase3_Login_wrong_username_pwd.java:14)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1005605439", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1005605439'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2027198777", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2027198777'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase3_Login_wrong_username_pwd.Login_wrong_un_pwd(Testcase3_Login_wrong_username_pwd.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -965,242 +980,41 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating@65d09a04</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration()'><b>NewUser_registration</b><br>Test class: amazon1.Project_1.Testcase1_Newuser_successfully_register</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1925233616", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1925233616'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase1_Newuser_successfully_register@7530ad9c</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace620296009", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace620296009'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod@58a9760d</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info()'><b>user_can_edit_profile_info</b><br>Test class: amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace842772169", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace842772169'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info@5fbe4146</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin()'><b>Reach_till_cart_withoutLogin</b><br>Test class: amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace964148965", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace964148965'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin@75db5df9</td></tr>
-<tr>
-<td title='amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes()'><b>signin_search_shoes</b><br>Test class: amazon1.Project_1.Testcase5_searchProduct_likeshoe</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace36731334", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace36731334'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-</pre></div></td>
-<td>0</td>
-<td>amazon1.Project_1.Testcase5_searchProduct_likeshoe@71e9ddb4</td></tr>
+<td>amazon1.Project_1.Testcase3_Login_wrong_username_pwd@4e50c791</td></tr>
 <tr>
 <td title='amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.Verify_item_addtoshoppingcart()'><b>Verify_item_addtoshoppingcart</b><br>Test class: amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage</td>
-<td><div><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.Verify_item_addtoshoppingcart(Testcase9_Verify_items_addToshoppingcart_from_productpage.java:15)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
-... Removed 19 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1556087190", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1556087190'><pre>org.testng.TestNGException: 
-Parameter &apos;browser&apos; is required by BeforeMethod on method launch but has not been marked @Optional or defined
-in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
-	at org.testng.internal.Parameters.createParams(Parameters.java:270)
-	at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-	at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-	at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-	at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace518355242", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace518355242'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage.Verify_item_addtoshoppingcart(Testcase9_Verify_items_addToshoppingcart_from_productpage.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
 	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -1211,16 +1025,348 @@ in C:\Users\kales\eclipse-workspace\Project_1\testngparallel.xml
 	at org.testng.TestRunner.privateRun(TestRunner.java:794)
 	at org.testng.TestRunner.run(TestRunner.java:596)
 	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
-	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
-	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-	at java.base/java.lang.Thread.run(Thread.java:1575)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage@4961f6af</td></tr>
+<td>amazon1.Project_1.Testcase9_Verify_items_addToshoppingcart_from_productpage@158a8276</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes()'><b>signin_search_shoes</b><br>Test class: amazon1.Project_1.Testcase5_searchProduct_likeshoe</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes(Testcase5_searchProduct_likeshoe.java:14)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace61227510", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace61227510'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase5_searchProduct_likeshoe.signin_search_shoes(Testcase5_searchProduct_likeshoe.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase5_searchProduct_likeshoe@7d8704ef</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process(Testcase12_CheckIfUser_SelectPaymentMethod.java:14)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1652656816", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1652656816'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod.checkout_process(Testcase12_CheckIfUser_SelectPaymentMethod.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase12_CheckIfUser_SelectPaymentMethod@17f7cd29</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration()'><b>NewUser_registration</b><br>Test class: amazon1.Project_1.Testcase1_Newuser_successfully_register</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration(Testcase1_Newuser_successfully_register.java:16)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1602314131", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1602314131'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase1_Newuser_successfully_register.NewUser_registration(Testcase1_Newuser_successfully_register.java:16)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase1_Newuser_successfully_register@609cd4d8</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process()'><b>checkout_process</b><br>Test class: amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:14)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1032122643", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1032122643'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review.checkout_process(Testcase11_ValidateEntireCheckout_Address_Payment_order_review.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase11_ValidateEntireCheckout_Address_Payment_order_review@13b6aecc</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin()'><b>Reach_till_cart_withoutLogin</b><br>Test class: amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at amazon1.Project_1.Homepage.search_product3(Homepage.java:105)
+	at amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin(Testcase15_Reach_till_cartpage_withoutlogin.java:12)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1077640163", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1077640163'><pre>java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)&quot; because &quot;this.searchContext&quot; is null
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
+	at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at amazon1.Project_1.Homepage.search_product3(Homepage.java:105)
+	at amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin.Reach_till_cart_withoutLogin(Testcase15_Reach_till_cartpage_withoutlogin.java:12)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase15_Reach_till_cartpage_withoutlogin@1e66f1f5</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info()'><b>user_can_edit_profile_info</b><br>Test class: amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info(Testcase4_User_Successfully_edit_profile_info.java:14)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace266328452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace266328452'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info.user_can_edit_profile_info(Testcase4_User_Successfully_edit_profile_info.java:14)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase4_User_Successfully_edit_profile_info@6913c1fb</td></tr>
+<tr>
+<td title='amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort()'><b>Check_productsort</b><br>Test class: amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating</td>
+<td><div><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort(Testcase8_Check_Productsort_Relevance_price_rating.java:15)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1053991692", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1053991692'><pre>java.lang.IllegalArgumentException: Driver must be set
+	at org.openqa.selenium.internal.Require.nonNull(Require.java:61)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:64)
+	at org.openqa.selenium.interactions.Actions.&lt;init&gt;(Actions.java:60)
+	at amazon1.Project_1.Homepage.accountandlist(Homepage.java:56)
+	at amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating.Check_productsort(Testcase8_Check_Productsort_Relevance_price_rating.java:15)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>0</td>
+<td>amazon1.Project_1.Testcase8_Check_Productsort_Relevance_price_rating@79d8407f</td></tr>
 </table><p>
 </body>
 </html>

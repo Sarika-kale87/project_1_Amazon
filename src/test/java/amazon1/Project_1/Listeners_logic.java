@@ -25,9 +25,10 @@ public class Listeners_logic implements ITestListener
 		
 		ITestListener.super.onTestFailure(result);
 		Reporter.log("Testcase failed");
-	/*	TakesScreenshot ts=(TakesScreenshot)driver;
-		File source=ts.getScreenshotAs(OutputType.FILE);
-		File destination=new File("C:\\Users\\kales\\eclipse-workspace\\Selenium\\ScreenShot\\one" +Math.random()+".png");*/
+	/*TakesScreenshot ts=(TakesScreenshot)driver;  //((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		File source=((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File destination=new File("C:\\Users\\kales\\eclipse-workspace\\Project_1\\Failure_screenshotsone" +Math.random()+".png");*/
 	}
 
 	
