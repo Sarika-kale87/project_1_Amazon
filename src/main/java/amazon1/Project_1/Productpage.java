@@ -18,7 +18,7 @@ import org.testng.Assert;
 public class Productpage {
 	
 	WebDriver driver;
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(40));
 	
 	@FindBy(xpath="(//i[@class='a-icon a-icon-checkbox'])[12]")
 	WebElement filter_brand_checkbox;

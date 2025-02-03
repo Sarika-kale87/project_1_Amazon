@@ -13,7 +13,7 @@ import org.testng.Assert;
 public class Checkoutpage {
 
 	WebDriver driver;
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(30));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(40));
 	
 	@FindBy(xpath="(//a[@class='a-link-normal expand-panel-button celwidget'])")
 	WebElement addresschange_button;

@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Homepage {
 	
 	WebDriver driver;
-	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
 	
 	@FindBy (xpath="//span[@class='nav-line-2 ']")
 	//@FindBy (xpath="//span[.='Account & Lists']")

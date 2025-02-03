@@ -12,10 +12,10 @@ import org.testng.annotations.Parameters;
 public class Launch_quit {
 	
 	WebDriver driver;
-	@Parameters("browser")
+	//@Parameters("browser")
 	@BeforeMethod
 	
-	public void launch(String browsername)
+	/*public void launch(String browsername)
 	{
 		
 		if(browsername.equals("Edge"))
@@ -34,14 +34,14 @@ public class Launch_quit {
 			
 		}
 		
-	}
-	/*public void launch1()
+	}*/
+	public void launch1()
 	{
 		driver=new EdgeDriver();
 		driver.get("https://www.amazon.in");
 		driver.manage().window().maximize();
 		
-	}*/
+	}
 	@AfterMethod
 	public void quit()
 	{

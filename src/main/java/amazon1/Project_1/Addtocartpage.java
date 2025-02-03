@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class Addtocartpage {
 	
 	WebDriver driver;
-	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(40));
 	
 	
 	@FindBy(xpath="(//input[@data-feature-id='proceed-to-checkout-action'])")

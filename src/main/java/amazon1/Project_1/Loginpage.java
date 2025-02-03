@@ -21,7 +21,7 @@ import org.testng.Assert;
 public class Loginpage {
 
 	WebDriver driver;
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(40));
 
 	@FindBy(name = "email")
 	// @FindBy(xpath="//input[@class='a-input-text']")

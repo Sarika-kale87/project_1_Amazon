@@ -13,7 +13,7 @@ import org.testng.Assert;
 public class Registrationpage {
 	
 	WebDriver driver;
-	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+	WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(40));
 	
 	
 	
