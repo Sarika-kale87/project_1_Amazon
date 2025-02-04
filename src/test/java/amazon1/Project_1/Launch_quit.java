@@ -37,7 +37,7 @@ public class Launch_quit {
 	}*/
 	public void launch1()
 	{
-		driver=new EdgeDriver();
+		driver=new ChromeDriver();
 		driver.get("https://www.amazon.in");
 		driver.manage().window().maximize();
 		
